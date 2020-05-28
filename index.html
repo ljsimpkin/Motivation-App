@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+<div class="container">
+    <h1 class="title">Time to make a point</h1>
+    <br>
+    Set length of time in seconds: <input type="number" id="timeText" style="z-index:2;position:fixed;"value=3>
+
+    <p class="content">
+      <label for="bank">BANK</label>
+      <a type="number" id="bank" value=10>10</a>
+      <label for="potentialPoints">POTENTIAL POINTS</label>
+      <a type="number" id="potentialPoints" value=0>0</a>
+      <br>
+      <a id="minutesDisplay" value="00">00</a> m
+      <a id="secondsDisplay" value="00">00</a> s
+      <br>
+      <button class="button" onclick="openFullscreen();" id="startButton">Start</button>
+      <button class="button" onclick="closeFullscreen();" id="stopButton">Stop</button>
+      <!-- <button onclick="buttonFunction();">Start</button> -->
+    </p>
+    <svg viewBox="0 0 500 500" preserveAspectRatio="none">
+        <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:aquamarine;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#00B285;stop-opacity:1" />
+            </linearGradient>
+        </defs>
+        <path d="M0,150 C150,300 300,0 500,300 L500,00 L0,0 Z" fill="url(#grad1)" />
+    </svg>
+
+    <p class="footer">Note: Only compatable with computer browsers. Internet Explorer 10 and earlier does not support the msRequestFullscreen() method.
+    </p>
+</div>
+
+<script src="scripts.js"> </script>
+
+</body>
+</html>
